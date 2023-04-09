@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: todos
-        image: yamini0727/peliqan
+        image: yamini0727/python-new-app
         ports:
         - containerPort: 8000
