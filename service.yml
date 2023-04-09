@@ -11,4 +11,4 @@ spec:
       targetPort: 8000
   type: LoadBalancer
   externalIPs:
-  -  13.233.3.63
+  -  52.66.207.242
