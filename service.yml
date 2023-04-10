@@ -1,12 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: todos
+  name: new-service
+  annotations:
+    metallb.universe.tf/address-pool: my-address-pool
+    metallb.universe.tf/allow-shared-ip: "true"
 spec:
+  type: LoadBalancer
   selector:
     app: todos
   ports:
-    - name: http
-      port: 8000
-      targetPort: 8000
-  type: LoadBalancer
+  - name: http
+    port: 8000
+    targetPort: 8000
