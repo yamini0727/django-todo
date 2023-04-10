@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: todos
+  name: new-python
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: todos
@@ -13,7 +13,7 @@ spec:
         app: todos
     spec:
       containers:
-      - name: todos
-        image: yamini0727/python-new-app
+      - name: todos-container
+        image: yamini0727/django-app
         ports:
         - containerPort: 8000
